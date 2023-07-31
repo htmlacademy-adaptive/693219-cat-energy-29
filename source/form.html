@@ -36,6 +36,7 @@
     <main class="main-container">
       <section class="request">
         <h1 class="request__title">Подбор программы</h1>
+
         <p class="request__description">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
@@ -45,7 +46,7 @@
           action="https://echo.htmlacademy.ru"
           method="post"
         >
-          <div class="form__info">
+          <fieldset class="form__group">
             <label class="label"
               >ИМЯ:*<input
                 class="input"
@@ -71,9 +72,9 @@
                 placeholder="7"
                 name="age"
             /></label>
-          </div>
+          </fieldset>
 
-          <div class="form__program">
+          <fieldset class="form__group">
             <label class="label"
               ><input
                 class="radio"
@@ -99,10 +100,12 @@
                 value="dontknow"
               />Не знаю (Нужен ваш совет)</label
             >
-          </div>
+          </fieldset>
 
-          <div class="form__cat-owner">
-            <p class="text-form">Контактные данные (владельца кота)</p>
+          <fieldset class="form__group">
+            <legend class="form__title">
+              Контактные данные (владельца кота)
+            </legend>
 
             <label class="label"
               >E-mail:*<input
@@ -121,10 +124,10 @@
                 name="phone"
                 required
             /></label>
-          </div>
+          </fieldset>
 
-          <div class="form__coment">
-            <p class="text-form">Комментарий</p>
+          <fieldset class="form__group">
+            <legend class="form__title">Комментарий</legend>
 
             <textarea
               class="input"
@@ -133,10 +136,10 @@
               rows="10"
               placeholder="Расскажите обо всех повадках кота"
             ></textarea>
-          </div>
+          </fieldset>
 
-          <div class="form__additionally">
-            <p class="text-form">Дополнительно</p>
+          <fieldset class="form__group">
+            <legend class="form__title">Дополнительно</legend>
 
             <label class="label"
               ><input
@@ -167,17 +170,19 @@
                 name="vitamine"
               />Витамины</label
             >
-          </div>
+          </fieldset>
 
-          <div class="form__submit">
+          <fieldset class="form__group">
             <button class="button" type="submit">Отправить заявку</button>
             <p class="submit-text">* — Обязательные поля</p>
-          </div>
+          </fieldset>
         </form>
       </section>
 
       <section class="contact">
-        <h2 class="contact__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="contact__title title">
+          Приглашаем к сотрудничеству дилеров!
+        </h2>
         <p class="contact__adress">
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
@@ -200,7 +205,7 @@
         <li class="social-list__item social-list__item--vk">
           <a href="#"><span class="visually-hidden">Вконтакте</span></a>
         </li>
-        <li class="social-list__item social-list__item-yotube">
+        <li class="social-list__item social-list__item--yotube">
           <a href="#"><span class="visually-hidden">Youtube</span></a>
         </li>
         <li class="social-list__item social-list__item--telegram">
@@ -208,16 +213,9 @@
         </li>
       </ul>
 
-      <ul class="main-footer__logo html-logo">
-        <li class="html-logo__item html-logo__item--text">
-          <a href="#"><span class="visually-hidden">HTML Academy</span></a>
-        </li>
-        <li class="html-logo__item html-logo__item--pic">
-          <a href="#"
-            ><span class="visually-hidden">Логотип HTML Academy</span></a
-          >
-        </li>
-      </ul>
+      <a class="main-footer__logo html-logo" href="#"
+        ><span class="visually-hidden">Логотип HTML Academy</span></a
+      >
     </footer>
   </body>
 </html>
