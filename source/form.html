@@ -10,7 +10,7 @@
         <img src="img/header-logo.svg" alt="Рыжий кот" width="33" height="38" />
       </a>
 
-      <a class="main-header__site-logo" href="#">
+      <a class="main-header__site-logo site-logo" href="#">
         <img src="img/site-logo.svg" alt="Cat energy" width="101" height="18" />
       </a>
 
@@ -19,14 +19,14 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">
             <a href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item site-list__item--current">
+          <li class="main-nav__item">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -47,7 +47,7 @@
           method="post"
         >
           <fieldset class="form__group">
-            <label class="label"
+            <label class="form__label"
               >ИМЯ:*<input
                 class="input"
                 type="text"
@@ -56,7 +56,7 @@
                 required
             /></label>
 
-            <label class="label"
+            <label class="form__label"
               >Вес (кг):*<input
                 class="input"
                 type="text"
@@ -65,7 +65,7 @@
                 required
             /></label>
 
-            <label class="label"
+            <label class="form__label"
               >Возраст (лет):<input
                 class="input"
                 type="text"
@@ -75,7 +75,7 @@
           </fieldset>
 
           <fieldset class="form__group">
-            <label class="label"
+            <label class="form__label"
               ><input
                 class="radio"
                 type="radio"
@@ -84,7 +84,7 @@
                 checked
               />Похудение</label
             >
-            <label class="label"
+            <label class="form__label"
               ><input
                 class="radio"
                 type="radio"
@@ -92,7 +92,7 @@
                 value="bulkup"
               />Набор массы</label
             >
-            <label class="label"
+            <label class="form__label"
               ><input
                 class="radio"
                 type="radio"
@@ -107,7 +107,7 @@
               Контактные данные (владельца кота)
             </legend>
 
-            <label class="label"
+            <label class="form__label"
               >E-mail:*<input
                 class="input input--email"
                 type="email"
@@ -116,7 +116,7 @@
                 required
             /></label>
 
-            <label class="label"
+            <label class="form__label"
               >Телефон:*<input
                 class="input input--phone"
                 type="text"
@@ -141,7 +141,7 @@
           <fieldset class="form__group">
             <legend class="form__title">Дополнительно</legend>
 
-            <label class="label"
+            <label class="form__label"
               ><input
                 class="checkbox"
                 type="checkbox"
@@ -150,12 +150,12 @@
               />Сахарозаменитель</label
             >
 
-            <label class="label"
+            <label class="form__label"
               ><input class="checkbox" type="checkbox" name="water" />Питьевая
               вода</label
             >
 
-            <label class="label"
+            <label class="form__label"
               ><input
                 class="checkbox"
                 type="checkbox"
@@ -163,7 +163,7 @@
               />Молоко</label
             >
 
-            <label class="label"
+            <label class="form__label"
               ><input
                 class="checkbox"
                 type="checkbox"
