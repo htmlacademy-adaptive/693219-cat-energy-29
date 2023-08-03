@@ -1,0 +1,51 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 53px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 42px;
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.advantages__list {
+  padding-left: 80px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin: 0;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  left: -80px;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--sheet::before {
+  background-image: url(../../img/advantages-sheet.png);
+}
+
+.advantages__item--powder::before {
+  background-image: url(../../img/advantages-powder.png);
+}
+
+.advantages__item--cutlery::before {
+  background-image: url(../../img/advantages-cutlery.png);
+}
+
+.advantages__item--watch::before {
+  background-image: url(../../img/advantages-watch.png);
+}
