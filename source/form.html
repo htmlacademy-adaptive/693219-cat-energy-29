@@ -44,6 +44,7 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-container">
       <section class="request">
         <div class="wrapper">
@@ -60,7 +61,7 @@
           >
             <fieldset class="form__group">
               <label class="form__label"
-                >ИМЯ:*<input
+                >Имя:*<input
                   class="input"
                   type="text"
                   placeholder="БАРСИК"
@@ -86,7 +87,7 @@
               /></label>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--radio">
               <label class="form__label"
                 ><input
                   class="radio"
@@ -96,6 +97,7 @@
                   checked
                 />Похудение</label
               >
+
               <label class="form__label"
                 ><input
                   class="radio"
@@ -104,6 +106,7 @@
                   value="bulkup"
                 />Набор массы</label
               >
+
               <label class="form__label"
                 ><input
                   class="radio"
@@ -142,10 +145,8 @@
               <legend class="form__title">Комментарий</legend>
 
               <textarea
-                class="input"
+                class="input--textarea"
                 name="comment"
-                cols="26"
-                rows="10"
                 placeholder="Расскажите обо всех повадках кота"
               ></textarea>
             </fieldset>
@@ -183,11 +184,10 @@
                 />Витамины</label
               >
             </fieldset>
-
-            <fieldset class="form__group">
-              <button class="button" type="submit">Отправить заявку</button>
-              <p class="submit-text">* — Обязательные поля</p>
-            </fieldset>
+            <button class="form__button button" type="submit">
+              Отправить заявку
+            </button>
+            <p class="form__submit-text">* — Обязательные поля</p>
           </form>
         </div>
       </section>
