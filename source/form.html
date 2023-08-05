@@ -59,28 +59,31 @@
             action="https://echo.htmlacademy.ru"
             method="post"
           >
-            <fieldset class="form__group">
-              <label class="form__label"
-                >Имя:*<input
-                  class="input"
+            <fieldset class="form__group form__group--input">
+              <label class="form__label input">
+                <span class="input__text">Имя:*</span>
+                <input
+                  class="input__field"
                   type="text"
                   placeholder="БАРСИК"
                   name="name"
                   required
               /></label>
 
-              <label class="form__label"
-                >Вес (кг):*<input
-                  class="input"
+              <label class="form__label input">
+                <span class="input__text">Вес (кг):*</span>
+                <input
+                  class="input__field"
                   type="text"
                   placeholder="7"
                   name="weight"
                   required
               /></label>
 
-              <label class="form__label"
-                >Возраст (лет):<input
-                  class="input"
+              <label class="form__label input">
+                <span class="input__text">Возраст (лет):</span>
+                <input
+                  class="input__field"
                   type="text"
                   placeholder="7"
                   name="age"
@@ -88,33 +91,39 @@
             </fieldset>
 
             <fieldset class="form__group form__group--radio">
-              <label class="form__label"
-                ><input
-                  class="radio"
+              <label class="form__label radio">
+                <input
+                  class="radio__input visually-hidden"
                   type="radio"
                   name="program"
                   value="fit"
                   checked
-                />Похудение</label
-              >
+                />
+                <span class="radio__mark"></span>
+                <span class="radio__text">Похудение</span>
+              </label>
 
-              <label class="form__label"
+              <label class="form__label radio"
                 ><input
-                  class="radio"
+                  class="radio__input visually-hidden"
                   type="radio"
                   name="program"
                   value="bulkup"
-                />Набор массы</label
-              >
+                />
+                <span class="radio__mark"></span>
+                <span class="radio__text">Набор массы</span>
+              </label>
 
-              <label class="form__label"
+              <label class="form__label radio"
                 ><input
-                  class="radio"
+                  class="radio__input visually-hidden"
                   type="radio"
                   name="program"
                   value="dontknow"
-                />Не знаю (Нужен ваш совет)</label
-              >
+                />
+                <span class="radio__mark"></span>
+                <span class="radio__text">Не знаю (Нужен ваш совет)</span>
+              </label>
             </fieldset>
 
             <fieldset class="form__group">
@@ -122,18 +131,20 @@
                 Контактные данные (владельца кота)
               </legend>
 
-              <label class="form__label"
-                >E-mail:*<input
-                  class="input input--email"
+              <label class="form__label input"
+                ><span class="input__text">E-mail:*</span
+                ><input
+                  class="input__field input--email"
                   type="email"
                   placeholder="kuklachev@gmail.com"
                   name="email"
                   required
               /></label>
 
-              <label class="form__label"
-                >Телефон:*<input
-                  class="input input--phone"
+              <label class="form__label input"
+                ><span class="input__text">Телефон:*</span
+                ><input
+                  class="input__field input--phone"
                   type="text"
                   placeholder="8 (960) 900-60-90"
                   name="phone"
