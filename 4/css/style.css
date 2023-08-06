@@ -232,7 +232,7 @@ a {
 }
 .hero {
   padding-top: 27px;
-  background-image: url("../../img/cat-hero.png");
+  background-image: url("../img/cat-hero.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto 302px;
@@ -322,14 +322,14 @@ a {
   background-repeat: no-repeat;
 }
 .article__title--slim::after {
-  background-image: url("../../img/cat-slim.svg");
+  background-image: url("../img/cat-slim.svg");
   width: 36px;
   height: 50px;
   left: -65px;
   top: -10px;
 }
 .article__title--pro::after {
-  background-image: url("../../img/cat-pro.svg");
+  background-image: url("../img/cat-pro.svg");
   width: 67px;
   height: 28px;
   left: -80px;
@@ -371,16 +371,16 @@ a {
   background-repeat: no-repeat;
 }
 .advantages__item--sheet::before {
-  background-image: url("../../img/advantages-sheet.png");
+  background-image: url("../img/advantages-sheet.png");
 }
 .advantages__item--powder::before {
-  background-image: url("../../img/advantages-powder.png");
+  background-image: url("../img/advantages-powder.png");
 }
 .advantages__item--cutlery::before {
-  background-image: url("../../img/advantages-cutlery.png");
+  background-image: url("../img/advantages-cutlery.png");
 }
 .advantages__item--watch::before {
-  background-image: url("../../img/advantages-watch.png");
+  background-image: url("../img/advantages-watch.png");
 }
 .example {
   padding-top: 25px;
@@ -409,7 +409,7 @@ a {
   gap: 32px;
 }
 .example-list__wrapper {
-  background-image: url("../../img/border.png");
+  background-image: url("../img/border.png");
   background-repeat: no-repeat;
   padding-top: 15px;
   display: flex;
@@ -620,7 +620,7 @@ a {
   gap: 0;
   flex-direction: column;
   padding-top: 78px;
-  background-image: url("../../img/plus.svg");
+  background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
   background-position: center 25px;
 }
@@ -691,7 +691,7 @@ a {
   width: 100%;
 }
 .gift {
-  background-image: url("../../img/gift-bg.png");
+  background-image: url("../img/gift-bg.png");
   padding-top: 187px;
   padding-bottom: 43px;
   display: flex;
@@ -715,7 +715,7 @@ a {
   position: absolute;
   width: 78px;
   height: 80px;
-  background-image: url("../../img/gift.svg");
+  background-image: url("../img/gift.svg");
   top: 59px;
 }
 /*# sourceMappingURL=style.css.map */
