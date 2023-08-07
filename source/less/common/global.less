@@ -1,3 +1,4 @@
+// Colors
 @basic-white: #ffffff;
 @basic-black: #000000;
 @basic-green: #68b738;
@@ -5,6 +6,12 @@
 @special_dark-grey: #444444;
 @special_dark-grey-2: #222222;
 @border-color: #cdcdcd;
+
+// Viewports
+
+@tablet-width: 768px;
+@desktop-width: 1220px;
+@mobile-width-only: 767px;
 
 body {
   margin: 0;
@@ -46,4 +53,16 @@ a {
 .wrapper {
   width: 280px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    width: 1220px;
+  }
 }
