@@ -1,6 +1,6 @@
 .main-header {
-  padding-top: 22px;
-  padding-bottom: 18px;
+  padding-top: 13px;
+  padding-bottom: 14px;
 }
 
 .main-header .wrapper {
@@ -10,18 +10,16 @@
 }
 
 .main-header__site-logo {
-  padding-left: 89px;
   position: relative;
+  display: flex;
+  gap: 56px;
 }
 
 .main-header__site-logo::before {
   content: "";
-  position: absolute;
+  display: block;
   width: 33px;
   height: 38px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
   background-image: url("../../img/header-logo.svg");
 }
 
@@ -56,8 +54,8 @@
 
 @media (min-width: @tablet-width) {
   .main-header {
-    padding-top: 33px;
-    padding-bottom: 47px;
+    padding-top: 25px;
+    padding-bottom: 0;
   }
 
   .main-header__toggle {
@@ -65,7 +63,7 @@
   }
 
   .main-header__site-logo {
-    padding-left: 73px;
+    gap: 13px;
   }
 
   .main-header__site-logo::before {
@@ -77,19 +75,28 @@
 
 @media (min-width: @desktop-width) {
   .main-header {
-    padding-top: 33px;
-    padding-bottom: 47px;
+    padding-top: 55px;
+    padding-bottom: 32px;
+  }
+
+  .main-header__nav {
+    margin: 0;
+    background-color: transparent;
   }
 
   .main-header__site-logo {
-    padding-left: 73px;
+    gap: 14px;
+  }
+
+  .main-header__site-logo img {
+    align-self: center;
     width: 118px;
     height: 21px;
   }
 
   .main-header__site-logo::before {
-    background-image: url("../../img/header-logo-tablet.svg");
-    width: 60px;
-    height: 50px;
+    background-image: url("../../img/header-logo-desktop.svg");
+    width: 70px;
+    height: 59px;
   }
 }
