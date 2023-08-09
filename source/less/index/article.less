@@ -4,10 +4,10 @@
 }
 
 .article {
-  padding: 20px;
+  padding-left: 20px;
   padding-top: 30px;
-  padding-bottom: 18px;
   background-color: @bg-gray;
+  position: relative;
 }
 
 .article__title {
@@ -54,19 +54,23 @@
   width: 63px;
   height: 50px;
   background-size: 63px 50px;
+  left: -5px;
 }
 
 .article__button {
   width: 139px;
   padding: 4px 0;
+  margin-bottom: 18px;
 }
 
 @media (min-width: @tablet-width) {
+  .articles .wrapper {
+    gap: 30px;
+  }
+
   .article {
-    padding: 53px;
-    padding-right: 63px;
+    padding-left: 53px;
     padding-top: 77px;
-    padding-bottom: 57px;
     background-color: @bg-gray;
   }
 
@@ -74,6 +78,8 @@
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 24px;
+    position: static;
   }
 
   .article__title::before {
@@ -86,9 +92,71 @@
     background-size: 200px 211px;
   }
 
+  .article__title--pro::before {
+    width: 268px;
+    height: 200px;
+    background-size: 268px 200px;
+  }
+
+  .article__title--slim::before {
+    top: 92px;
+    right: 63px;
+  }
+
+  .article__title--pro::before {
+    top: 91px;
+    right: 29px;
+  }
+
   .article__description {
     width: 340px;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 52px;
+    padding: 0;
+    border: none;
+  }
+
+  .article__button {
+    margin-bottom: 62px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    padding-top: 82px;
+  }
+
+  .articles .wrapper {
+    display: flex;
+    gap: 80px;
+  }
+  .articles__item {
+    width: 570px;
+  }
+
+  .article__title {
+    position: relative;
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  .article__title::before {
+    right: auto;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 106px;
+    background-size: 100px 106px;
+  }
+
+  .article__description {
+    width: 467px;
+    margin-bottom: 27px;
+  }
+
+  .article__button {
+    margin-bottom: 55px;
   }
 }
