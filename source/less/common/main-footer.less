@@ -22,3 +22,35 @@
   width: 128px;
   height: 24px;
 }
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    padding: 55px 0;
+  }
+
+  .main-footer .wrapper {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .main-footer__site-logo {
+    margin-right: 160px;
+  }
+
+  .main-footer__social-list {
+    width: 132px;
+    padding: 0;
+    border: none;
+  }
+
+  .main-footer__logo {
+    width: 168px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__site-logo {
+    margin-right: 416px;
+  }
+}
