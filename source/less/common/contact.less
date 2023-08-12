@@ -4,6 +4,16 @@
   flex-direction: column;
 }
 
+.contact::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 362px;
+  background-image: url(../../img/location.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 362px;
+}
+
 .contact--catalog {
   background-color: @bg-gray;
 }
@@ -36,4 +46,67 @@
   width: 320px;
   height: 360px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .contact {
+    padding-top: 61px;
+  }
+
+  .contact::after {
+    background-size: 100% 400px;
+  }
+
+  .contact .wrapper {
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 60px;
+  }
+
+  .contact__title {
+    font-size: 20px;
+    line-height: 26px;
+    width: 163px;
+  }
+
+  .contact__adress {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact {
+    padding-top: 95px;
+    padding-bottom: 105px;
+    position: relative;
+  }
+
+  .contact .wrapper {
+    justify-content: flex-start;
+  }
+
+  .contact__title {
+    padding: 60px 80px;
+    width: 323px;
+    background-color: @basic-white;
+  }
+
+  .contact__adress {
+    padding: 60px 78px 60px 7px;
+    background-color: @basic-white;
+    width: 242px;
+  }
+
+  .contact::after {
+    position: absolute;
+    z-index: -1;
+    height: 400px;
+    top: 0;
+  }
 }
