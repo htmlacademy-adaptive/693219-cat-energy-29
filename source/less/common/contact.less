@@ -83,12 +83,12 @@
 @media (min-width: @desktop-width) {
   .contact {
     padding-top: 95px;
-    padding-bottom: 105px;
     position: relative;
   }
 
   .contact .wrapper {
     justify-content: flex-start;
+    padding: 0;
   }
 
   .contact__title {
@@ -108,5 +108,8 @@
     z-index: -1;
     height: 400px;
     top: 0;
+  }
+
+  .contact::after {
   }
 }
