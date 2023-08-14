@@ -9,15 +9,6 @@
   <body class="page__body">
     <header class="main-header">
       <div class="wrapper">
-        <a class="main-header__header-logo" href="#">
-          <img
-            src="img/header-logo.svg"
-            alt="Рыжий кот"
-            width="33"
-            height="38"
-          />
-        </a>
-
         <a class="main-header__site-logo" href="#">
           <img
             src="img/site-logo.svg"
@@ -30,20 +21,25 @@
         <button class="main-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+
+        <nav class="main-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html"
+                >Каталог продукции</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="form.html"
+                >Подбор программы</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-header__nav main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main-container">
@@ -204,22 +200,18 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact contact--catalog">
         <div class="wrapper">
           <h2 class="contact__title title">
             Приглашаем<br />к сотрудничеству дилеров!
           </h2>
           <p class="contact__adress">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            <span class="contact__adress-street"
+              >ул. Большая Конюшенная, д. 19/8</span
+            >
+            <span class="contact__adress-street">Санкт-Петербург</span>
           </p>
         </div>
-        <img
-          class="contact__map"
-          src="img/location.jpg"
-          alt="карта"
-          width="320"
-          height="362"
-        />
       </section>
     </main>
 
