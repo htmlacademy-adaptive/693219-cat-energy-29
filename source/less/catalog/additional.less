@@ -85,6 +85,7 @@
   .additional-card__price {
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 
   .additional__card-title {
@@ -104,4 +105,57 @@
 }
 
 @media (min-width: @desktop-width) {
+  .additional {
+    padding-top: 76px;
+  }
+
+  .additional .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .additional__title {
+    margin-right: auto;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+  }
+
+  .additional__list {
+    width: 895px;
+    margin-right: auto;
+    margin-bottom: 80px;
+  }
+
+  .additional__item {
+    border-left: none;
+    border-right: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    align-items: center;
+  }
+
+  .additional__card-title {
+    width: 325px;
+    margin: 0;
+  }
+
+  .additional__unit {
+    width: 242px;
+    margin: 0;
+  }
+
+  .additional__price {
+    width: 82px;
+  }
+
+  .additional_button {
+    width: 244px;
+  }
+
+  .gift {
+    width: 245px;
+  }
 }
