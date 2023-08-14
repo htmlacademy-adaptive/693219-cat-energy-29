@@ -23,6 +23,9 @@
   padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid @border-color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .additional__item:first-child {
@@ -47,6 +50,58 @@
   margin-bottom: 15px;
 }
 
-.additional_button {
-  width: 100%;
+@media (min-width: @tablet-width) {
+  .additional {
+    padding-top: 70px;
+  }
+
+  .additional__list {
+    margin-bottom: 70px;
+  }
+
+  .additional__title {
+    display: inline-block;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px;
+    background-color: @basic-white;
+    margin-bottom: 80px;
+  }
+
+  // TODO сделать зеленую линию
+  // .additional__title::after {
+  //   content: "";
+  // }
+
+  .additional__item {
+    padding: 0 40px;
+    padding-top: 25px;
+    padding-bottom: 27px;
+    border-left: 1px solid @border-color;
+    border-right: 1px solid @border-color;
+    flex-direction: row;
+  }
+
+  .additional-card__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional__card-title {
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 26px;
+  }
+
+  .additional__unit {
+    margin-right: 48px;
+  }
+
+  .additional_button {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
 }
