@@ -48,7 +48,8 @@
           <h1 class="request__title">Подбор программы</h1>
 
           <p class="request__description">
-            Заполните анкету, и мы подберем программу питания для вашего кота
+            Заполните анкету, и мы подберем<br />
+            программу питания для вашего кота
           </p>
 
           <form
@@ -88,42 +89,42 @@
             </fieldset>
 
             <fieldset class="form__group form__group--radio">
-              <label class="form__label radio">
+              <label class="form__label check">
                 <input
-                  class="radio__input visually-hidden"
+                  class="check__input visually-hidden"
                   type="radio"
                   name="program"
                   value="fit"
                   checked
                 />
-                <span class="radio__mark"></span>
-                <span class="radio__text">Похудение</span>
+                <span class="check__mark"></span>
+                <span class="check__text">Похудение</span>
               </label>
 
-              <label class="form__label radio"
+              <label class="form__label check"
                 ><input
-                  class="radio__input visually-hidden"
+                  class="check__input visually-hidden"
                   type="radio"
                   name="program"
                   value="bulkup"
                 />
-                <span class="radio__mark"></span>
-                <span class="radio__text">Набор массы</span>
+                <span class="check__mark"></span>
+                <span class="check__text">Набор массы</span>
               </label>
 
-              <label class="form__label radio"
+              <label class="form__label check"
                 ><input
-                  class="radio__input visually-hidden"
+                  class="check__input visually-hidden"
                   type="radio"
                   name="program"
                   value="dontknow"
                 />
-                <span class="radio__mark"></span>
-                <span class="radio__text">Не знаю (Нужен ваш совет)</span>
+                <span class="check__mark"></span>
+                <span class="check__text">Не знаю (Нужен ваш совет)</span>
               </label>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--email">
               <legend class="form__title">
                 Контактные данные (владельца кота)
               </legend>
@@ -149,7 +150,7 @@
               /></label>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--textarea">
               <legend class="form__title">Комментарий</legend>
 
               <textarea
@@ -159,39 +160,51 @@
               ></textarea>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--input-add">
               <legend class="form__title">Дополнительно</legend>
 
-              <label class="form__label"
+              <label class="form__label check"
                 ><input
-                  class="checkbox"
+                  class="check__input visually-hidden"
                   type="checkbox"
                   name="sweetener"
                   checked
-                />Сахарозаменитель</label
-              >
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Сахарозаменитель</span>
+              </label>
 
-              <label class="form__label"
-                ><input class="checkbox" type="checkbox" name="water" />Питьевая
-                вода</label
-              >
-
-              <label class="form__label"
+              <label class="form__label check"
                 ><input
-                  class="checkbox"
+                  class="check__input visually-hidden"
+                  type="checkbox"
+                  name="water"
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Питьевая вода</span>
+              </label>
+
+              <label class="form__label check"
+                ><input
+                  class="check__input visually-hidden"
                   type="checkbox"
                   name="milk"
-                />Молоко</label
-              >
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Молоко</span>
+              </label>
 
-              <label class="form__label"
+              <label class="form__label check"
                 ><input
-                  class="checkbox"
+                  class="check__input visually-hidden"
                   type="checkbox"
                   name="vitamine"
-                />Витамины</label
-              >
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Витамины</span>
+              </label>
             </fieldset>
+
             <button class="form__button button" type="submit">
               Отправить заявку
             </button>

@@ -1,6 +1,5 @@
 .request {
   padding-top: 27px;
-  border-top: 1px solid #d9d9d9;
 }
 
 .request__title {
@@ -19,5 +18,38 @@
   color: @basic-black;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  width: 226px;
+}
+
+@media (min-width: @tablet-width) {
+  .request {
+    padding-top: 65px;
+  }
+
+  .request__title {
+    padding: 0 40px;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  .request__description {
+    padding: 0 40px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .request {
+    padding-top: 74px;
+  }
+
+  .request__title {
+    padding: 0;
+  }
+
+  .request__description {
+    padding: 0;
+  }
 }
