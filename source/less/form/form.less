@@ -1,7 +1,6 @@
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+  margin-bottom: 32px;
 }
 
 .form__title {
@@ -60,17 +59,18 @@
   text-align: center;
   line-height: 16px;
   margin: 0;
-  margin-bottom: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .form {
     padding: 0 40px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .form__group {
     gap: 20px;
     margin-bottom: 72px;
+    grid-column: 2 span;
   }
 
   .form__group--input {
@@ -83,6 +83,12 @@
 
   .form__group--input-add {
     flex-direction: row;
+    gap: 32px;
+    margin-bottom: 55px;
+  }
+
+  .form__group--input-add .form__title {
+    margin-bottom: 55px;
   }
 
   .form__group--input-add .form__label {
@@ -112,4 +118,47 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    padding: 0;
+    gap: 0 80px;
+  }
+
+  .form__group {
+    gap: 20px;
+    margin-bottom: 72px;
+    grid-column: 1 span;
+    // margin-bottom: 0;
+  }
+
+  .form__group--radio {
+    gap: 13px;
+  }
+
+  .form__group--email,
+  .form__group--textarea,
+  .form__group--input-add {
+    grid-column: 2 span;
+  }
+
+  .form__group--input-add {
+    justify-content: space-between;
+  }
+
+  .form__group--input-add .form__label {
+    width: calc(25% - 40px);
+  }
+
+  .form__group--email {
+    gap: 80px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__group--email .form__label {
+    width: calc(50% - 40px);
+  }
+
+  .form__button {
+    width: 100%;
+  }
 }
