@@ -75,7 +75,7 @@ a {
     padding-top: 114px;
   }
   .main-container--index {
-    padding-top: 0px;
+    padding-top: 0;
   }
 }
 .main-header {
@@ -1091,9 +1091,6 @@ a {
   .form__group--input {
     margin-bottom: 72px;
   }
-  .form__group--radio {
-    gap: 15px;
-  }
   .form__group--input-add {
     flex-direction: row;
     gap: 32px;
@@ -1112,6 +1109,7 @@ a {
     width: 280px;
   }
   .form__group--radio {
+    gap: 15px;
     border: 1px solid #d9d9d9;
     padding: 27px;
     padding-top: 23px;
@@ -1249,7 +1247,7 @@ a {
 .check__input:checked ~ .check__mark-box::before {
   width: 26px;
   height: 26px;
-  background-image: url(../img/tick.png);
+  background-image: url("../img/tick.png");
   background-color: transparent;
 }
 @media (min-width: 768px) {
