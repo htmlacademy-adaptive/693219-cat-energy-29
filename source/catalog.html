@@ -2,21 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="wrapper">
-        <a class="main-header__header-logo" href="#">
-          <img
-            src="img/header-logo.svg"
-            alt="Рыжий кот"
-            width="33"
-            height="38"
-          />
-        </a>
-
         <a class="main-header__site-logo" href="#">
           <img
             src="img/site-logo.svg"
@@ -29,20 +21,25 @@
         <button class="main-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+
+        <nav class="main-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a
+                class="main-nav__link main-nav__link--current"
+                href="catalog.html"
+                >Каталог продукции</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-header__nav main-nav visually-hidden">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main-container">
@@ -56,8 +53,8 @@
                 class="product-card__img"
                 src="img/catalog-1.png"
                 alt="Cat Energy PRO 500"
-                width="68"
-                height="86"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -86,8 +83,8 @@
                 class="product-card__img"
                 src="img/catalog-2.png"
                 alt="Cat Energy PRO 1000"
-                width="84"
-                height="100"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -116,8 +113,8 @@
                 class="product-card__img"
                 src="img/catalog-3.png"
                 alt="Cat Energy PRO 500"
-                width="68"
-                height="78"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -146,8 +143,8 @@
                 class="product-card__img"
                 src="img/catalog-4.png"
                 alt="Cat Energy PRO 1000"
-                width="84"
-                height="100"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -176,8 +173,8 @@
                 class="product-card__img"
                 src="img/catalog-5.png"
                 alt="Cat Energy slim 500"
-                width="68"
-                height="78"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -206,8 +203,8 @@
                 class="product-card__img"
                 src="img/catalog-6.png"
                 alt="Cat Energy slim 1000"
-                width="84"
-                height="100"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -236,8 +233,8 @@
                 class="product-card__img"
                 src="img/catalog-7.png"
                 alt="Cat Energy slim 500"
-                width="72"
-                height="84"
+                width="140"
+                height="107"
               />
 
               <div class="product-card__container">
@@ -332,7 +329,7 @@
 
           <div class="gift">
             <p class="gift__text">
-              Закажите все и получите чехол для кота в подарок!
+              Закажите все<br />и получите чехол для кота в подарок!
             </p>
           </div>
         </div>
@@ -344,16 +341,12 @@
             Приглашаем<br />к сотрудничеству дилеров!
           </h2>
           <p class="contact__adress">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            <span class="contact__adress-street"
+              >ул. Большая Конюшенная, д. 19/8</span
+            >
+            <span class="contact__adress-street">Санкт-Петербург</span>
           </p>
         </div>
-        <img
-          class="contact__map"
-          src="img/location.jpg"
-          alt="карта"
-          width="320"
-          height="362"
-        />
       </section>
     </main>
 

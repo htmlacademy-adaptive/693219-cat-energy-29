@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto 302px;
+}
+
+.hero .wrapper {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -46,4 +51,78 @@
 
 .main-header__header-logo img {
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    padding-top: 65px;
+    background-image: none;
+  }
+
+  .hero__title {
+    color: @basic-black;
+    font-size: 60px;
+    line-height: 60px;
+    width: 420px;
+    margin-left: 90px;
+    margin-bottom: 40px;
+    text-align: start;
+  }
+
+  .hero__description {
+    color: @basic-black;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 90px;
+    margin-bottom: 48px;
+    text-align: start;
+  }
+
+  .hero__img {
+    order: 1;
+    width: 709px;
+    height: 609px;
+    margin-top: -102px;
+    margin-left: 42px;
+  }
+
+  .hero__button {
+    margin-bottom: 20px;
+    margin-left: 90px;
+    width: 245px;
+    height: 54px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero {
+    padding-top: 224px;
+    background-image: url("../img/cat-hero.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50% auto;
+    position: relative;
+  }
+
+  .hero__title {
+    margin-left: 80px;
+  }
+
+  .hero__description {
+    margin-left: 80px;
+  }
+
+  .hero__button {
+    margin-bottom: 184px;
+  }
+
+  .hero__img {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    margin: 0;
+    left: 467px;
+    top: -81px;
+  }
 }

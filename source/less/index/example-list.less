@@ -1,9 +1,7 @@
 .example-list {
-  margin: 0;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 124px);
+  gap: 20px 32px;
 }
 
 .example-list__wrapper {
@@ -42,7 +40,8 @@
   line-height: 100%;
 }
 
-.example__text {
+.example-list__text {
+  grid-column: 2 span;
   color: @basic-black;
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -52,5 +51,55 @@
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example-list {
+    display: flex;
+    gap: 43px;
+  }
+
+  .example-list__wrapper {
+    width: 163px;
+    height: 77px;
+    background-size: 163px 77px;
+    padding-top: 15px;
+  }
+
+  .example-list__value {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 11px;
+  }
+
+  .example-list__meaning {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    width: 125px;
+  }
+
+  .example-list__text {
+    font-size: 20px;
+    width: 174px;
+    margin-left: auto;
+    text-align: end;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-list {
+    display: grid;
+    grid-template-columns: repeat(2, 162px);
+    gap: 55px 42px;
+  }
+
+  .example-list__text {
+    grid-column: 2 span;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -2,21 +2,13 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="wrapper">
-        <a class="main-header__header-logo" href="#">
-          <img
-            src="img/header-logo.svg"
-            alt="Рыжий кот"
-            width="33"
-            height="38"
-          />
-        </a>
-
         <a class="main-header__site-logo" href="#">
           <img
             src="img/site-logo.svg"
@@ -29,20 +21,25 @@
         <button class="main-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
+
+        <nav class="main-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html"
+                >Каталог продукции</a
+              >
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="form.html"
+                >Подбор программы</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-header__nav main-nav visually-hidden">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main class="main-container">
@@ -51,7 +48,8 @@
           <h1 class="request__title">Подбор программы</h1>
 
           <p class="request__description">
-            Заполните анкету, и мы подберем программу питания для вашего кота
+            Заполните анкету, и мы подберем<br />
+            программу питания для вашего кота
           </p>
 
           <form
@@ -91,42 +89,42 @@
             </fieldset>
 
             <fieldset class="form__group form__group--radio">
-              <label class="form__label radio">
+              <label class="form__label check">
                 <input
-                  class="radio__input visually-hidden"
+                  class="check__input visually-hidden"
                   type="radio"
                   name="program"
                   value="fit"
                   checked
                 />
-                <span class="radio__mark"></span>
-                <span class="radio__text">Похудение</span>
+                <span class="check__mark"></span>
+                <span class="check__text">Похудение</span>
               </label>
 
-              <label class="form__label radio"
+              <label class="form__label check"
                 ><input
-                  class="radio__input visually-hidden"
+                  class="check__input visually-hidden"
                   type="radio"
                   name="program"
                   value="bulkup"
                 />
-                <span class="radio__mark"></span>
-                <span class="radio__text">Набор массы</span>
+                <span class="check__mark"></span>
+                <span class="check__text">Набор массы</span>
               </label>
 
-              <label class="form__label radio"
+              <label class="form__label check"
                 ><input
-                  class="radio__input visually-hidden"
+                  class="check__input visually-hidden"
                   type="radio"
                   name="program"
                   value="dontknow"
                 />
-                <span class="radio__mark"></span>
-                <span class="radio__text">Не знаю (Нужен ваш совет)</span>
+                <span class="check__mark"></span>
+                <span class="check__text">Не знаю (Нужен ваш совет)</span>
               </label>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--email">
               <legend class="form__title">
                 Контактные данные (владельца кота)
               </legend>
@@ -152,7 +150,7 @@
               /></label>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--textarea">
               <legend class="form__title">Комментарий</legend>
 
               <textarea
@@ -162,63 +160,72 @@
               ></textarea>
             </fieldset>
 
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--input-add">
               <legend class="form__title">Дополнительно</legend>
 
-              <label class="form__label"
+              <label class="form__label check"
                 ><input
-                  class="checkbox"
+                  class="check__input visually-hidden"
                   type="checkbox"
                   name="sweetener"
                   checked
-                />Сахарозаменитель</label
-              >
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Сахарозаменитель</span>
+              </label>
 
-              <label class="form__label"
-                ><input class="checkbox" type="checkbox" name="water" />Питьевая
-                вода</label
-              >
-
-              <label class="form__label"
+              <label class="form__label check"
                 ><input
-                  class="checkbox"
+                  class="check__input visually-hidden"
+                  type="checkbox"
+                  name="water"
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Питьевая вода</span>
+              </label>
+
+              <label class="form__label check"
+                ><input
+                  class="check__input visually-hidden"
                   type="checkbox"
                   name="milk"
-                />Молоко</label
-              >
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Молоко</span>
+              </label>
 
-              <label class="form__label"
+              <label class="form__label check"
                 ><input
-                  class="checkbox"
+                  class="check__input visually-hidden"
                   type="checkbox"
                   name="vitamine"
-                />Витамины</label
-              >
+                />
+                <span class="check__mark check__mark-box"></span>
+                <span class="check__text">Витамины</span>
+              </label>
             </fieldset>
+
             <button class="form__button button" type="submit">
               Отправить заявку
             </button>
+
             <p class="form__submit-text">* — Обязательные поля</p>
           </form>
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact contact--catalog">
         <div class="wrapper">
           <h2 class="contact__title title">
             Приглашаем<br />к сотрудничеству дилеров!
           </h2>
           <p class="contact__adress">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            <span class="contact__adress-street"
+              >ул. Большая Конюшенная, д. 19/8</span
+            >
+            <span class="contact__adress-street">Санкт-Петербург</span>
           </p>
         </div>
-        <img
-          class="contact__map"
-          src="img/location.jpg"
-          alt="карта"
-          width="320"
-          height="362"
-        />
       </section>
     </main>
 
