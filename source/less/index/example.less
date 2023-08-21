@@ -81,8 +81,12 @@
   .example .wrapper {
     display: grid;
     grid-template-columns: 463px 560px;
-    grid-template-rows: 137px 96px 152px;
+    grid-template-rows: repeat(3, auto);
     gap: 69px 224px;
+  }
+
+  .example__list {
+    padding-bottom: 0;
   }
 
   .example__slider {

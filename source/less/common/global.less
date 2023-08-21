@@ -55,6 +55,37 @@ a {
   clip: rect(0 0 0 0);
 }
 
+.form__title,
+.additional__title {
+  display: inline-block;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.form__title,
+.additional__title {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 3px;
+    left: -100vw;
+    top: 50%;
+    transform: translateX(-40px);
+    border-bottom: 2px solid #68b738;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 50%;
+    right: -100vw;
+    transform: translateX(40px);
+    border-bottom: 2px solid #68b738;
+  }
+}
+
 *,
 *::before,
 *::after {
