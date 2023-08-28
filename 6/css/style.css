@@ -31,6 +31,7 @@ body {
 }
 .main-container {
   flex-grow: 1;
+  overflow: hidden;
 }
 .main-footer {
   flex-shrink: 0;
@@ -55,9 +56,16 @@ a {
 }
 .form__title,
 .additional__title {
-  display: inline-block;
-  background-color: #ffffff;
   position: relative;
+  width: 100%;
+  background-color: transparent;
+}
+.form__title span,
+.additional__title span {
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: -20px;
 }
 .form__title::before,
 .additional__title::before {
@@ -65,20 +73,11 @@ a {
   content: "";
   width: 100vw;
   height: 3px;
-  left: -100vw;
+  left: 50%;
   top: 50%;
-  transform: translateX(-40px);
-  border-bottom: 2px solid #68b738;
-}
-.form__title::after,
-.additional__title::after {
-  position: absolute;
-  content: "";
-  width: 100vw;
-  height: 50%;
-  right: -100vw;
-  transform: translateX(40px);
-  border-bottom: 2px solid #68b738;
+  transform: translate(-50%, -50%);
+  background-color: #68b738;
+  z-index: -1;
 }
 *,
 *::before,
@@ -253,7 +252,9 @@ a {
     color: #ffffff;
   }
   .main-nav__link--current {
-    color: #ffffff;
+    border-color: #68b738;
+  }
+  .main-nav__link--index.main-nav__link--current {
     border-color: #ffffff;
   }
 }
@@ -274,6 +275,7 @@ a {
   text-transform: uppercase;
   box-sizing: border-box;
   padding: 10px 0;
+  cursor: pointer;
 }
 .button--link {
   color: #000000;
@@ -926,7 +928,7 @@ a {
 .example-list {
   display: grid;
   grid-template-columns: repeat(2, 124px);
-  gap: 20px 32px;
+  gap: 40px 32px;
 }
 .example-list__wrapper {
   background-image: url("../img/border.png");
@@ -937,6 +939,9 @@ a {
   justify-content: center;
   align-items: center;
   width: 124px;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  border-radius: 5px;
 }
 .example-list__value {
   color: #000000;
@@ -951,6 +956,9 @@ a {
   text-transform: uppercase;
 }
 .example-list__meaning {
+  position: absolute;
+  bottom: -20px;
+  background-color: #f2f2f2;
   margin: 0;
   width: 80px;
   color: #444444;
@@ -994,6 +1002,8 @@ a {
     font-size: 14px;
     line-height: 14px;
     width: 125px;
+    bottom: -6px;
+    background-color: #ffffff;
   }
   .example-list__text {
     font-size: 20px;
@@ -1015,6 +1025,9 @@ a {
     text-align: center;
     display: flex;
     justify-content: space-between;
+  }
+  .example-list__meaning {
+    background-color: #f2f2f2;
   }
 }
 .request {
@@ -1229,6 +1242,7 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
+  resize: none;
 }
 @media (min-width: 768px) {
   .input {
@@ -1622,7 +1636,7 @@ a {
 .gift {
   background-image: url("../img/gift-bg.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   padding-top: 60px;
   padding-bottom: 43px;
