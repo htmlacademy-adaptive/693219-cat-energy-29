@@ -28,6 +28,7 @@ body {
 
 .main-container {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .main-footer {
@@ -57,29 +58,27 @@ a {
 
 .form__title,
 .additional__title {
-  display: inline-block;
-  background-color: #ffffff;
   position: relative;
+  width: 100%;
+  background-color: transparent;
+
+  & span {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+  }
 
   &::before {
     position: absolute;
     content: "";
     width: 100vw;
     height: 3px;
-    left: -100vw;
+    left: 50%;
     top: 50%;
-    transform: translateX(-40px);
-    border-bottom: 2px solid #68b738;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 50%;
-    right: -100vw;
-    transform: translateX(40px);
-    border-bottom: 2px solid #68b738;
+    transform: translate(-50%, -50%);
+    background-color: #68b738;
+    z-index: -1;
   }
 }
 
