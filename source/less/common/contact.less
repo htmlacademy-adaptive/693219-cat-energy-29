@@ -4,16 +4,6 @@
   flex-direction: column;
 }
 
-.contact::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 362px;
-  background-image: url("../img/location.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 362px;
-}
-
 .contact--catalog {
   background-color: @bg-gray;
 }
@@ -43,9 +33,10 @@
 }
 
 .contact__map {
-  width: 320px;
-  height: 360px;
-  margin: 0 auto;
+  height: 362px;
+  width: 100%;
+  border: none;
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
@@ -79,6 +70,10 @@
     line-height: 20px;
     width: 160px;
   }
+
+  .contact__map {
+    height: 400px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -109,7 +104,7 @@
     width: 242px;
   }
 
-  .contact::after {
+  .contact__map {
     position: absolute;
     z-index: -1;
     height: 400px;
