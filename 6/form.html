@@ -26,7 +26,7 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <nav class="main-header__nav main-nav">
+        <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -130,7 +130,10 @@
 
             <fieldset class="form__group form__group--email">
               <legend class="form__title">
-                <span>Контактные данные (владельца кота)</span>
+                <span
+                  >Контактные данные<br />
+                  (владельца кота)</span
+                >
               </legend>
 
               <label class="form__label input"
@@ -230,6 +233,14 @@
             <span class="contact__adress-street">Санкт-Петербург</span>
           </p>
         </div>
+        <iframe
+          class="contact__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8356051389692!2d30.317491999999998!3d59.9680504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sru!4v1639009892658!5m2!1sen!2sru"
+          width="766"
+          height="560"
+          allowfullscreen
+          title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
+        ></iframe>
       </section>
     </main>
 
@@ -265,5 +276,7 @@
         <a class="main-footer__logo html-logo" href="#">HTML Academy</a>
       </div>
     </footer>
+
+    <script src="/script.js"></script>
   </body>
 </html>

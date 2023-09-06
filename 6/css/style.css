@@ -137,9 +137,13 @@ a {
   margin: 0;
   background-color: #ffffff;
 }
+.main-nav__item {
+  width: 100%;
+}
 @media (max-width: 768px) {
   .main-header {
     position: relative;
+    border-bottom: 1px solid #e6e6e6;
   }
   .main-header__nav {
     display: none;
@@ -148,6 +152,12 @@ a {
     top: 64px;
     left: 0;
     z-index: 1;
+  }
+  .main-nav--opened {
+    display: block;
+  }
+  .main-nav--nojs {
+    display: block;
   }
 }
 @media (min-width: 768px) {
@@ -172,6 +182,9 @@ a {
     background-image: url("../img/header-logo-tablet.svg");
     width: 60px;
     height: 50px;
+  }
+  .main-nav__item {
+    width: auto;
   }
 }
 @media (min-width: 1220px) {
@@ -220,8 +233,11 @@ a {
   line-height: 20px;
   text-transform: uppercase;
   padding: 23px 0;
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   width: 100%;
+}
+.main-nav__item:first-child .main-nav__link {
+  border-top: 1px solid #e6e6e6;
 }
 @media (min-width: 768px) {
   .main-nav__list {
@@ -238,6 +254,9 @@ a {
   }
   .main-nav__link--current {
     border-bottom: 3px solid #68b738;
+  }
+  .main-nav__item:first-child .main-nav__link {
+    border-top: none;
   }
 }
 @media (min-width: 1220px) {
@@ -392,15 +411,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-.contact::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 362px;
-  background-image: url("../img/location.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 362px;
-}
 .contact--catalog {
   background-color: #f2f2f2;
 }
@@ -426,9 +436,10 @@ a {
   width: 140px;
 }
 .contact__map {
-  width: 320px;
-  height: 360px;
-  margin: 0 auto;
+  height: 362px;
+  width: 100%;
+  border: none;
+  display: block;
 }
 @media (min-width: 768px) {
   .contact {
@@ -457,6 +468,9 @@ a {
     line-height: 20px;
     width: 160px;
   }
+  .contact__map {
+    height: 400px;
+  }
 }
 @media (min-width: 1220px) {
   .contact {
@@ -481,7 +495,7 @@ a {
     background-color: #ffffff;
     width: 242px;
   }
-  .contact::after {
+  .contact__map {
     position: absolute;
     z-index: -1;
     height: 400px;
@@ -579,7 +593,7 @@ a {
     background-image: url("../img/cat-hero.png");
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: 50% auto;
+    background-size: 50% 100%;
     position: relative;
   }
   .hero__title {
@@ -745,8 +759,9 @@ a {
   margin-bottom: 40px;
   color: #000000;
   font-family: "Oswald", sans-serif;
-  font-size: 34px;
   line-height: 40px;
+  font-size: 36px;
+  font-weight: 400;
 }
 .advantages__list {
   list-style: none;
@@ -1001,7 +1016,8 @@ a {
     display: block;
     font-size: 14px;
     line-height: 14px;
-    width: 125px;
+    width: initial;
+    padding: 0 10px;
     bottom: -6px;
     background-color: #ffffff;
   }
@@ -1024,7 +1040,9 @@ a {
     width: 100%;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+  }
+  .example-list__text-2 {
+    margin-left: 63px;
   }
   .example-list__meaning {
     background-color: #f2f2f2;
@@ -1088,6 +1106,9 @@ a {
   line-height: 26px;
   margin: 0;
   margin-bottom: 35px;
+}
+.form__title span {
+  display: inline-block;
 }
 .form__group {
   border: none;
@@ -1172,6 +1193,9 @@ a {
     line-height: 36px;
     margin-bottom: 76px;
   }
+  .form__title span br {
+    display: none;
+  }
 }
 @media (min-width: 1220px) {
   .form {
@@ -1243,6 +1267,18 @@ a {
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
   resize: none;
+}
+.input--email {
+  background-image: url("../../img/email.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 12px;
+  padding-right: 32px;
+}
+.input--phone {
+  background-image: url("../../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position: top 50% right 12px;
+  padding-right: 32px;
 }
 @media (min-width: 768px) {
   .input {
@@ -1325,7 +1361,6 @@ a {
 }
 .catalog {
   padding-top: 27px;
-  border-top: 1px solid #e6e6e6;
 }
 .catalog__title {
   margin: 0;
@@ -1558,7 +1593,6 @@ a {
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
-    background-color: #ffffff;
     margin-bottom: 80px;
   }
   .additional__item {
