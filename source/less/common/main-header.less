@@ -37,9 +37,14 @@
   background-color: @basic-white;
 }
 
+.main-nav__item {
+  width: 100%;
+}
+
 @media (max-width: @tablet-width) {
   .main-header {
     position: relative;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .main-header__nav {
@@ -78,6 +83,10 @@
     background-image: url("../img/header-logo-tablet.svg");
     width: 60px;
     height: 50px;
+  }
+
+  .main-nav__item {
+    width: auto;
   }
 }
 
