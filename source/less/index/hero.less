@@ -1,6 +1,10 @@
 .hero {
   padding-top: 27px;
   background-image: url("../img/index/cat-hero.png");
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/cat-hero@2x.png");
+  }
+
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto 302px;
@@ -98,7 +102,11 @@
 @media (min-width: @desktop-width) {
   .hero {
     padding-top: 224px;
-    background-image: url("../img/index/cat-hero.png");
+    background-image: url("../img/index/cat-hero-desktop.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/cat-hero-desktop@2x.png");
+    }
+
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 50% 100%;

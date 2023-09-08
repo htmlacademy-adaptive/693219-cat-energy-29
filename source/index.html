@@ -56,13 +56,33 @@
         <div class="wrapper">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__description">Занялся собой? Займись котом!</p>
-          <img
-            class="hero__img"
-            src="img/index/hero-img.png"
-            alt="Еда для котов с курицей"
-            width="280"
-            height="270"
-          />
+
+          <picture>
+            <source
+              media="(min-width: 1220px)"
+              srcset="
+                img/index/hero-img-desktop.png    1x,
+                img/index/hero-img-desktop@2x.png 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                img/index/hero-img-mobile.png    1x,
+                img/index/hero-img-mobile@2x.png 2x
+              "
+            />
+
+            <img
+              class="hero__img"
+              src="img/index/hero-img.png"
+              alt="Еда для котов с курицей"
+              width="280"
+              height="270"
+              srcset="img/index/hero-img@2x.png"
+            />
+          </picture>
+
           <a class="hero__button button" href="form.html"
             >Подобрать программу</a
           >
@@ -159,13 +179,31 @@
             </p>
           </dl>
 
-          <img
-            class="example__slider"
-            src="img/index/slides.png"
-            alt="Кот до и после нашего корма"
-            width="280"
-            height="256"
-          />
+          <picture>
+            <source
+              media="(min-width: 1220px)"
+              srcset="
+                img/index/slides-desktop.png    1x,
+                img/index/slides-desktop@2x.png 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                img/index/slides-mobile.png    1x,
+                img/index/slides-mobile@2x.png 2x
+              "
+            />
+
+            <img
+              class="example__slider"
+              src="img/index/slides.png"
+              alt="Кот до и после нашего корма"
+              width="280"
+              height="256"
+              srcset="img/index/slides@2x.png"
+            />
+          </picture>
         </div>
       </section>
 
