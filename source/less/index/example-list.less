@@ -1,7 +1,7 @@
 .example-list {
   display: grid;
   grid-template-columns: repeat(2, 124px);
-  gap: 20px 32px;
+  gap: 40px 32px;
 }
 
 .example-list__wrapper {
@@ -13,6 +13,9 @@
   justify-content: center;
   align-items: center;
   width: 124px;
+  border: 1px solid #cdcdcd;
+  position: relative;
+  border-radius: 5px;
 }
 
 .example-list__value {
@@ -29,6 +32,9 @@
 }
 
 .example-list__meaning {
+  position: absolute;
+  bottom: -20px;
+  background-color: @bg-gray;
   margin: 0;
   width: 80px;
   color: @special_dark-grey;
@@ -76,7 +82,10 @@
     display: block;
     font-size: 14px;
     line-height: 14px;
-    width: 125px;
+    width: initial;
+    padding: 0 10px;
+    bottom: -6px;
+    background-color: @basic-white;
   }
 
   .example-list__text {
@@ -100,6 +109,13 @@
     width: 100%;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+  }
+
+  .example-list__text-2 {
+    margin-left: 63px;
+  }
+
+  .example-list__meaning {
+    background-color: @bg-gray;
   }
 }

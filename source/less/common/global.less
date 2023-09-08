@@ -28,6 +28,7 @@ body {
 
 .main-container {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .main-footer {
@@ -53,6 +54,32 @@ a {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.form__title,
+.additional__title {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+
+  & span {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 3px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #68b738;
+    z-index: -1;
+  }
 }
 
 *,
