@@ -595,11 +595,18 @@ a {
 @media (min-width: 1220px) {
   .hero {
     padding-top: 224px;
-    background-image: url("../img/index/cat-hero-desktop.png");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 50% 100%;
     position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-image: url("../img/index/cat-hero-desktop.png");
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .hero__title {
     margin-left: 80px;
@@ -617,11 +624,6 @@ a {
     margin: 0;
     left: 467px;
     top: -81px;
-  }
-}
-@media (min-width: 1220px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1220px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: url("../img/index/cat-hero-desktop@2x.png");
   }
 }
 .articles .wrapper {
@@ -933,21 +935,28 @@ a {
 @media (min-width: 1220px) {
   .example {
     padding-top: 0;
-    padding-bottom: 45px;
+    padding-bottom: 75px;
   }
   .example .wrapper {
-    display: grid;
-    grid-template-columns: 463px 560px;
-    grid-template-rows: repeat(3, auto);
-    gap: 69px 224px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
-  .example__list {
-    padding-bottom: 0;
+  .example__title {
+    max-width: 463px;
+    margin-bottom: 146px;
+  }
+  .example__description {
+    width: 463px;
+    margin-bottom: 69px;
   }
   .example__slider {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .example__list {
+    margin: 0;
   }
 }
 .example-list {
