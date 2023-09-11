@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <link rel="stylesheet" href="css/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="images/favicons/apple.png" />
@@ -14,7 +14,7 @@
       <div class="wrapper">
         <a class="main-header__site-logo" href="#">
           <img
-            src="img/site-logo.svg"
+            src="img/common/site-logo.svg"
             alt="Cat energy"
             width="101"
             height="18"
@@ -56,13 +56,36 @@
         <div class="wrapper">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__description">Занялся собой? Займись котом!</p>
-          <img
-            class="hero__img"
-            src="img/hero-img.png"
-            alt="Еда для котов с курицей"
-            width="280"
-            height="270"
-          />
+
+          <picture class="hero__img">
+            <source
+              media="(min-width: 1220px)"
+              width="552"
+              height="499"
+              srcset="
+                img/index/hero-img-desktop.png    1x,
+                img/index/hero-img-desktop@2x.png 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              width="709"
+              height="609"
+              srcset="
+                img/index/hero-img-mobile.png    1x,
+                img/index/hero-img-mobile@2x.png 2x
+              "
+            />
+
+            <img
+              src="img/index/hero-img.png"
+              alt="Еда для котов с курицей"
+              width="280"
+              height="270"
+              srcset="img/index/hero-img@2x.png"
+            />
+          </picture>
+
           <a class="hero__button button" href="form.html"
             >Подобрать программу</a
           >
@@ -159,13 +182,25 @@
             </p>
           </dl>
 
-          <img
-            class="example__slider"
-            src="img/slides.png"
-            alt="Кот до и после нашего корма"
-            width="280"
-            height="256"
-          />
+          <picture class="example__slider">
+            <source
+              media="(min-width: 768px)"
+              width="560"
+              height="512"
+              srcset="
+                img/index/slides-mobile.png    1x,
+                img/index/slides-mobile@2x.png 2x
+              "
+            />
+
+            <img
+              src="img/index/slides.png"
+              alt="Кот до и после нашего корма"
+              width="280"
+              height="256"
+              srcset="img/index/slides@2x.png"
+            />
+          </picture>
         </div>
       </section>
 
@@ -196,7 +231,7 @@
       <div class="wrapper">
         <a class="main-footer__site-logo" href="#">
           <img
-            src="img/site-logo.svg"
+            src="img/common/site-logo.svg"
             alt="Cat energy"
             width="101"
             height="18"

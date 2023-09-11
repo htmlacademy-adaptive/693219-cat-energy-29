@@ -1,5 +1,10 @@
 .gift {
-  background-image: url("../img/gift-bg.png");
+  background-image: url("../img/catalog/gift-bg.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog/gift-bg@2x.png");
+  }
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,7 +33,7 @@
 .gift::before {
   content: "";
   display: block;
-  background-image: url("../img/gift.svg");
+  background-image: url("../img/catalog/gift.svg");
   width: 78px;
   height: 80px;
   background-size: 78px 80px;
@@ -37,6 +42,12 @@
 
 @media (min-width: @tablet-width) {
   .gift {
+    background-image: url("../img/catalog/gift-bg-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog/gift-bg-mobile@2x.png");
+    }
+
     padding-top: 57px;
     padding-bottom: 60px;
     padding-left: 78px;
@@ -61,6 +72,12 @@
 
 @media (min-width: @desktop-width) {
   .gift {
+    background-image: url("../img/catalog/gift-bg-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog/gift-bg-desktop@2x.png");
+    }
+
     flex-direction: column;
     padding-left: 0;
     padding-top: 56px;
