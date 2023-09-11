@@ -75,23 +75,37 @@
 @media (min-width: @desktop-width) {
   .example {
     padding-top: 0;
-    padding-bottom: 45px;
+    padding-bottom: 75px;
   }
 
   .example .wrapper {
-    display: grid;
-    grid-template-columns: 463px 560px;
-    grid-template-rows: repeat(3, auto);
-    gap: 69px 224px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .example__list {
     padding-bottom: 0;
   }
 
+  .example__title {
+    max-width: 463px;
+    margin-bottom: 146px;
+  }
+
+  .example__description {
+    width: 463px;
+    margin-bottom: 69px;
+  }
+
   .example__slider {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: -1;
+    // margin-bottom: 75px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .example__list {
+    margin: 0;
   }
 }
